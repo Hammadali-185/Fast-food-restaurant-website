@@ -34,7 +34,7 @@ function App() {
     try {
       // Try to get MongoDB URI from localStorage, or use the actual MongoDB Atlas URI
       const mongoURI = localStorage.getItem('mongoURI') || 
-        'mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush?retryWrites=true&w=majority&appName=Cluster0';
+        'mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority&appName=<clusterName>';
       
       console.log('Attempting to connect to MongoDB...');
       const result = await window.electronAPI.connectMongoDB(mongoURI);

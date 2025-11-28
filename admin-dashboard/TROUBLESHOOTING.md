@@ -7,7 +7,7 @@ Your MongoDB Atlas connection string is correct, but we're getting `queryTxt ETI
 ## ✅ Your Correct Connection String
 
 ```
-mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush?retryWrites=true&w=majority&appName=Cluster0
+mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority&appName=<clusterName>
 ```
 
 ## 🚨 Common Causes & Solutions
@@ -42,7 +42,7 @@ mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/
 
 **Solution:**
 1. Go to MongoDB Atlas → "Database Access"
-2. Find user `hammadk5802_db_user`
+2. Find the database user you created for this app
 3. Click "Edit" → "Built-in Role"
 4. Select "Read and write to any database"
 5. Click "Update User"
@@ -84,7 +84,7 @@ node test-connection.js
 
 ### Step 4: Verify Database User
 1. MongoDB Atlas → Database Access
-2. Check `hammadk5802_db_user` exists
+2. Check that your database user exists
 3. Verify it has "Read and write to any database" role
 
 ## 🚀 Quick Fix Commands
@@ -112,7 +112,7 @@ npm run dev
 If the admin dashboard still doesn't work, test with MongoDB Compass:
 
 1. Download [MongoDB Compass](https://www.mongodb.com/products/compass)
-2. Use connection string: `mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush`
+2. Use connection string: `mongodb+srv://<username>:<password>@<cluster-url>/jush`
 3. If Compass connects, the issue is with the admin dashboard
 4. If Compass fails, the issue is with MongoDB Atlas setup
 

@@ -4,7 +4,7 @@
 export const config = {
   // MongoDB Atlas Connection String
   // Get this from your MongoDB Atlas dashboard
-  MONGODB_URI: 'mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush?retryWrites=true&w=majority',
+  MONGODB_URI: 'mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority',
   
   // Default Admin Credentials
   // These will be created automatically if they don't exist

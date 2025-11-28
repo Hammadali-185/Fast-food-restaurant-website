@@ -81,7 +81,7 @@ This will install all required packages including:
 5. Click "Save Settings"
 6. Restart the app
 
-**Note:** The connection string now uses your actual MongoDB Atlas cluster URL: `cluster0.smk1uum.mongodb.net`
+**Note:** The connection string must use your MongoDB Atlas cluster URL (for example `cluster0.abc123.mongodb.net`)
 
 ⚠️ **If you get connection timeouts, see [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for solutions.**
 

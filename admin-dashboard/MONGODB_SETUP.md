@@ -29,11 +29,12 @@ Since you already have a MongoDB Atlas database for your website, use the SAME d
    ```
 
 4. **Replace Placeholders**
-   - Replace `<username>` with: `hammadk5802_db_user`
-   - Replace `<password>` with: `UG2dlaAugAbZHTHG`
+   - Replace `<username>` with your MongoDB Atlas database user
+   - Replace `<password>` with that user's password
+   - Replace `<cluster-url>` with your cluster host (for example `cluster0.abc123.mongodb.net`)
    - The final string should look like:
    ```
-   mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@your-actual-cluster.xxxxx.mongodb.net/jush?retryWrites=true&w=majority
+   mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority
    ```
 
 5. **Update the Admin Dashboard**
@@ -59,8 +60,7 @@ Since you already have a MongoDB Atlas database for your website, use the SAME d
 3. **Create Database User**
    - Go to "Database Access" in left sidebar
    - Click "Add New Database User"
-   - Username: `hammadk5802_db_user`
-   - Password: `UG2dlaAugAbZHTHG`
+   - Choose a secure username and password (store them safely)
    - User Privileges: "Read and write to any database"
    - Click "Add User"
 
@@ -75,7 +75,7 @@ Since you already have a MongoDB Atlas database for your website, use the SAME d
    - Click "Connect" on your cluster
    - Select "Connect your application"
    - Copy the connection string
-   - Replace `<password>` with `UG2dlaAugAbZHTHG`
+   - Replace the placeholder username/password with the credentials you created
 
 6. **Update Both Apps**
    - Update the connection string in:

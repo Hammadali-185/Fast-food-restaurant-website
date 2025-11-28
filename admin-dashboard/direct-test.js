@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 
 // Your actual MongoDB connection string
-const MONGODB_URI = 'mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush?retryWrites=true&w=majority&appName=Cluster0';
+const MONGODB_URI = 'mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority&appName=<clusterName>';
 
 async function directTest() {
   console.log('🔄 Direct MongoDB connection test...');

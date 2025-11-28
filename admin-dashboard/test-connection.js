@@ -3,7 +3,7 @@
 
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb+srv://hammadk5802_db_user:UG2dlaAugAbZHTHG@cluster0.smk1uum.mongodb.net/jush?retryWrites=true&w=majority&appName=Cluster0';
+const MONGODB_URI = 'mongodb+srv://<username>:<password>@<cluster-url>/jush?retryWrites=true&w=majority&appName=<clusterName>';
 
 async function testConnection() {
   try {
@@ -34,8 +34,8 @@ async function testConnection() {
     
     if (error.message.includes('Authentication failed')) {
       console.log('\n💡 Authentication tips:');
-      console.log('1. Verify username: hammadk5802_db_user');
-      console.log('2. Verify password: UG2dlaAugAbZHTHG');
+      console.log('1. Verify the database username');
+      console.log('2. Verify the database password');
       console.log('3. Check if the database user has proper permissions');
     }
     
