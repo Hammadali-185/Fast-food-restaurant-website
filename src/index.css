@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+ Jushh!! Brand Theme Colors
+=========================================
+*/
+
+:root {
+  /* --- Primary Brand Colors --- */
+  
+  /* Main CTA, headlines, and glows */
+  --primary-red: #FF3B00; 
+
+  /* Darker red for borders, footers, or secondary elements */
+  --primary-red-dark: #B30000; 
+
+  /* Primary text color on dark backgrounds, highlighted text */
+  --primary-white: #FFFFFF;
+
+
+  /* --- Accent Colors --- */
+
+  /* Secondary CTAs, hover effects, or energetic highlights */
+  --accent-orange: #FF6600; 
+  
+  /* Price text, flavor descriptions, or review stars */
+  --accent-yellow: #F5C542;
+
+
+  /* --- Background & UI Colors --- */
+
+  /* Main app and website background */
+  --background-dark: #1A0000; 
+
+  /* Card backgrounds, headers (slightly lighter than main bg) */
+  --ui-surface-dark: #000000; 
+  
+  /* Secondary text, borders, or dividers */
+  --ui-gray-medium: #666666; 
+
+  /* Input fields or inactive elements */
+  --ui-gray-dark: #333333; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-dark);
+  color: var(--primary-white);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ui-gray-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ui-gray-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Status badges */
+.status-pending {
+  @apply bg-accent-yellow/20 text-accent-yellow border-accent-yellow/30;
+}
+
+.status-in-progress {
+  @apply bg-accent-orange/20 text-accent-orange border-accent-orange/30;
+}
+
+.status-ready {
+  @apply bg-primary-red/20 text-primary-red border-primary-red/30;
+}
+
+.status-delivered {
+  @apply bg-ui-gray-medium/20 text-ui-gray-medium border-ui-gray-medium/30;
+}
